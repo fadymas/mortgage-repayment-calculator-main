@@ -1,6 +1,6 @@
 # Frontend Mentor - Mortgage repayment calculator solution
 
-This is a solution to the [Mortgage repayment calculator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Mortgage repayment calculator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -28,13 +28,13 @@ Users should be able to:
 
 ### Screenshot
 
-![Pc Version](public/assets/images/3ebac5ff-5abf-4492-8d0e-2d03ca2e6688.png)
-![Mobile Version](public/assets/images/1987fc9a-b38b-4c98-bc32-ab9b79b758be.png)
+![Pc Version](public/assets/images/ccbff72c-994c-4c33-9542-7ba034f4ff71.png)
+![Mobile Version](public/assets/images/mobileVersion.png)
 
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/results-summary-component-using-react-tailwind-css-and-json-data-iEHUn7yI_O](https://www.frontendmentor.io/solutions/results-summary-component-using-react-tailwind-css-and-json-data-iEHUn7yI_O)
-- Live Site URL: [https://fadymas.github.io/results-summary-component-main/](https://fadymas.github.io/results-summary-component-main/)
+- Live Site URL: [https://fadymas.github.io/mortgage-repayment-calculator-main/](https://fadymas.github.io/mortgage-repayment-calculator-main/)
 
 ## My process
 

@@ -28,9 +28,13 @@ const FormSchema = z.object({
     .refine((val) => !isNaN(Number(val)) && Number(val) > 0, {
       message: "Enter a valid number",
     }),
-  type: z.enum(["repayment", "interest-only", ""], {
-    message: "This field is required",
-  }),
+  type: z
+    .enum(["repayment", "interest-only", ""], {
+      message: "This field is required",
+    })
+    .refine((val: "repayment" | "interest-only" | "") => val != "", {
+      message: "This field is required",
+    }),
 });
 
 export type FormType = z.infer<typeof FormSchema>;
@@ -113,9 +117,9 @@ export default function MortgageForm() {
           </h1>
           <Button
             type="reset"
-            onClick={() => reset({ type: "" })}
+            onClick={() => reset()}
             variant="link"
-            className="underline p-0 text-[1.0625rem] md:text-[.6875rem] font-medium text-slate-700 hover:text-slate-900"
+            className="underline p-0 text-[1.0625rem] md:text-[.6875rem] font-medium text-slate-700 hover:text-slate-900 cursor-pointer"
           >
             Clear All
           </Button>

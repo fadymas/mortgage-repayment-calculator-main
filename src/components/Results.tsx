@@ -7,10 +7,9 @@ export default function Results({
   month: string;
   total: string;
 }) {
-  console.log(total, month);
-  if (total) {
+  if (total && month) {
     return (
-      <section className="results bg-slate-900 flex flex-col justify-center items-center gap-7 py-5 px-4 md:rounded-r-2xl md:rounded-bl-[5rem]  md:w-1/2 md:gap-5 md:px-8">
+      <section className="results bg-slate-900 flex flex-col justify-center items-center gap-7 py-5 px-4 md:rounded-r-2xl md:rounded-bl-[5rem]  md:w-1/2 md:gap-5 md:px-8 ">
         <div className="instructions gap-4 flex flex-col justify-center items-start">
           <h2 className="font-bold  text-lg tracking-[-0.04rem] md:tracking-[0.1rem] text-slate-50">
             Your results
@@ -21,23 +20,23 @@ export default function Results({
             repayments" again.
           </p>
         </div>
-        <Card className="self-stretch border-t-5  border-t-lime bg-slate-950/20 md:rounded-[5px]">
+        <Card className="self-stretch border-t-5  border-t-lime bg-slate-950/20 md:rounded-[5px] ">
           <CardContent>
-            <div className="monthly">
+            <div className="monthly ">
               <h3 className="text-slate-500 text-[0.6875rem]">
                 Your monthly repayments
               </h3>
-              <output className="text-lime text-[2.4375rem] font-bold">
-                &euro;{month}
+              <output className="text-lime text-[2.4375rem] font-bold overflow-ellipsis overflow-hidden w-full inline-block">
+                &euro;{isNaN(parseFloat(month)) ? "0.00" : month}
               </output>
             </div>
             <hr className="bg-slate-500 my-4" />
-            <div className="total ">
+            <div className="total  ">
               <h3 className="text-slate-500 text-[0.6875rem] mb-2">
                 Total you'll repay over the term
               </h3>
-              <output className="text-slate-50 text-[1.0625rem] font-bold">
-                &euro;{total}
+              <output className="text-slate-50 text-[1.0625rem] font-bold overflow-ellipsis overflow-hidden w-full inline-block">
+                &euro;{isNaN(parseFloat(total)) ? "0.00" : total}
               </output>
             </div>
           </CardContent>
@@ -48,6 +47,7 @@ export default function Results({
     return (
       <section className="results bg-slate-900 flex flex-col justify-center items-center gap-9 py-7 px-4  md:rounded-r-2xl md:rounded-bl-[5rem]  md:w-1/2 md:gap-5 md:px-8">
         <img
+        loading="lazy"
           src={emptyIcon}
           alt="Empty Results"
           className="w-48  md:w-30 md:h-28"

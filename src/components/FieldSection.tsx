@@ -51,6 +51,7 @@ export default function FieldSection({
             render={({ field }) => (
               <Input
                 {...field}
+                aria-invalid={errors.amount ? "true" : "false"}
                 id="amount"
                 type="number"
                 onInput={maxInput}
@@ -101,6 +102,7 @@ export default function FieldSection({
               control={control}
               render={({ field }) => (
                 <Input
+                  aria-invalid={errors.term ? "true" : "false"}
                   {...field}
                   id="term"
                   type="number"
@@ -116,7 +118,7 @@ export default function FieldSection({
 
             <span
               className={cn(
-                "absolute right-[.0313rem] top-[.0417rem] flex h-[calc(100%_-_0.09rem)] w-[3rem] items-center justify-center rounded-r-[0.3125rem] bg-slate-100 font-bold text-sm transition-colors md:h-[calc(100%_-_0.10rem)] md:rounded-r-[.25rem] md:text-[.75rem]",
+                "absolute right-[.0313rem] top-[.0417rem] flex h-[calc(100%_-_0.09rem)] w-[3rem] items-center justify-center rounded-r-[0.3125rem] bg-slate-100 font-bold text-sm transition-colors md:h-[calc(100%_-_0.10rem)] md:rounded-r-[.25rem] md:text-[.75rem] md:right-[.0379rem]",
                 errors.term
                   ? "bg-red text-white"
                   : "peer-focus-visible:bg-lime text-slate-900"
@@ -149,6 +151,7 @@ export default function FieldSection({
               render={({ field }) => (
                 <Input
                   {...field}
+                  aria-invalid={errors.rate ? "true" : "false"}
                   id="rate"
                   type="number"
                   onInput={maxInput}
@@ -183,7 +186,7 @@ export default function FieldSection({
       </FieldSet>
 
       {/* ===== Mortgage Type ===== */}
-      <FieldSet className="md:gap-[4px_!important]">
+      <FieldSet className="md:gap-[.25rem_!important]">
         <FieldTitle className="text-[1.0624rem] font-medium text-slate-700 md:text-[.75rem]">
           Mortgage Type
         </FieldTitle>
@@ -197,6 +200,7 @@ export default function FieldSection({
               id="type"
               onValueChange={field.onChange}
               value={field.value}
+              aria-invalid={errors.type ? "true" : "false"}
             >
               {/* Repayment */}
               <FieldLabel
@@ -216,6 +220,7 @@ export default function FieldSection({
                     value="repayment"
                     id="repayment"
                     className="transition-colors"
+                    aria-label="repayment"
                   />
                   <FieldContent>
                     <FieldTitle className="font-bold text-slate-900 md:text-[.75rem]">
@@ -243,6 +248,7 @@ export default function FieldSection({
                     value="interest-only"
                     id="interest-only"
                     className="transition-colors"
+                    aria-label="interest-only"
                   />
                   <FieldContent>
                     <FieldTitle className="font-bold text-slate-900 md:text-[.75rem]">
