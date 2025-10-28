@@ -6,6 +6,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 
+export type FormType = z.infer<typeof FormSchema>;
 const FormSchema = z.object({
   amount: z
     .string()
@@ -37,7 +38,6 @@ const FormSchema = z.object({
     }),
 });
 
-export type FormType = z.infer<typeof FormSchema>;
 
 export default function MortgageForm() {
   const [monthlyPayment, setMonthlyPayment] = useState("");
@@ -103,6 +103,7 @@ export default function MortgageForm() {
   function onSubmitForm(data: FormType) {
     calculateMortgage(data);
   }
+  
 
   return (
     <>
