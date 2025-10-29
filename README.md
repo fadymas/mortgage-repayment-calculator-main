@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/mortgage-repayment-calculator-using-react-typescript-and-tailwind-q34NdN4w-B](https://www.frontendmentor.io/solutions/mortgage-repayment-calculator-using-react-typescript-and-tailwind-q34NdN4w-B)
 - Live Site URL: [https://fadymas.github.io/mortgage-repayment-calculator-main/](https://fadymas.github.io/mortgage-repayment-calculator-main/)
 
 ## My process
